@@ -1,5 +1,20 @@
 # Embroider Changelog
 
+## Release (2023-07-14)
+
+@embroider/compat 3.2.0 (minor)
+@embroider/core 3.2.0 (minor)
+@embroider/macros 1.12.4 (patch)
+@embroider/shared-internals 2.3.0 (minor)
+@embroider/webpack 3.1.4 (patch)
+
+#### :rocket: Enhancement
+* `compat`, `core`, `shared-internals`
+  * [#1521](https://github.com/embroider-build/embroider/pull/1521) New option: staticEmberSource ([@ef4](https://github.com/ef4))
+
+#### Committers: 1
+- Edward Faulkner ([@ef4](https://github.com/ef4))
+
 ## Release (2023-07-13)
 
 @embroider/addon-dev 3.1.2 (patch)
