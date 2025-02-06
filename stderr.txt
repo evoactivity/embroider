@@ -1,0 +1,43 @@
+Warning: unknown package "@embroider/test-scenarios"
+Warning: unknown package "addon-template"
+Warning: unknown package "app-template"
+Warning: unknown package "ts-app-template"
+Warning: unknown package "@embroider/test-support"
+Warning: unknown package "@embroider/sample-transforms"
+Warning: unknown package "@embroider/test-fixtures"
+Warning: unknown package "app-template"
+Warning: unknown package "@embroider/test-scenarios"
+Warning: unknown package "@embroider/test-support"
+Warning: unknown package "addon-template"
+Warning: unknown package "@embroider/test-fixtures"
+Warning: unknown package "ts-app-template"
+Warning: unknown package "@embroider/sample-transforms"
+Warning: unknown package "@embroider/test-scenarios"
+Warning: unknown package "ts-app-template"
+Warning: unknown package "@embroider/test-support"
+Warning: unknown package "@embroider/test-scenarios"
+Warning: unknown package "@embroider/sample-transforms"
+Warning: unknown package "addon-template"
+Warning: unknown package "app-template"
+Warning: unknown package "ts-app-template"
+Warning: unknown package "@embroider/test-support"
+Warning: unknown package "@embroider/test-fixtures"
+Warning: unknown package "@embroider/unstable-release"
+# Unlabeled Changes
+
+* `@embroider/vite`, `addon-template`, `app-template`, `@embroider/test-scenarios`, `ts-app-template`
+  * [#2239](https://github.com/embroider-build/embroider/pull/2239) Adding test coverage for vite 6 ([@ef4](https://github.com/ef4))
+* `@embroider/compat`
+  * [#2242](https://github.com/embroider-build/embroider/pull/2242) stop nullifying loader.js ([@mansona](https://github.com/mansona))
+  * [#1628](https://github.com/embroider-build/embroider/pull/1628) prepare a release ([@mansona](https://github.com/mansona))
+* `@embroider/core`
+  * [#1671](https://github.com/embroider-build/embroider/pull/1671) Prepare a release ([@mansona](https://github.com/mansona))
+* `@embroider/addon-dev`, `@embroider/babel-loader-9`, `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/router`, `@embroider/shared-internals`, `@embroider/test-setup`, `@embroider/vite`, `@embroider/webpack`
+  * [#1616](https://github.com/embroider-build/embroider/pull/1616) prepare release ([@mansona](https://github.com/mansona))
+* `@embroider/addon-dev`, `@embroider/vite`
+  * [#1568](https://github.com/embroider-build/embroider/pull/1568) plan release ([@mansona](https://github.com/mansona))
+* `@embroider/addon-dev`, `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/shared-internals`, `@embroider/vite`, `@embroider/webpack`
+  * [#1566](https://github.com/embroider-build/embroider/pull/1566) preparing a release ([@mansona](https://github.com/mansona))
+
+
+*Cannot plan release until the above changes are labeled*.
