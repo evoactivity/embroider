@@ -1,5 +1,244 @@
 # Embroider Changelog
 
+## Release (2026-08-04)
+
+* @embroider/addon-dev 8.4.0 (minor)
+* @embroider/addon-shim 1.10.4 (patch)
+* @embroider/compat 4.1.22 (patch)
+* @embroider/core 4.7.0 (minor)
+* @embroider/legacy-inspector-support 0.2.0 (minor)
+* @embroider/macros 1.21.0 (minor)
+* @embroider/reverse-exports 0.3.0 (minor)
+* @embroider/router 3.0.7 (patch)
+* @embroider/shared-internals 3.2.0 (minor)
+* @embroider/template-tag-codemod 1.5.0 (minor)
+* @embroider/vite 1.8.0 (minor)
+
+#### :rocket: Enhancement
+* `@embroider/core`
+  * [#2734](https://github.com/embroider-build/embroider/pull/2734) optimize `handleRenaming` in module-resolver ([@davidtaylorhq](https://github.com/davidtaylorhq))
+  * [#2735](https://github.com/embroider-build/embroider/pull/2735) compile `@embroider/core` to es2022 for native #private fields ([@davidtaylorhq](https://github.com/davidtaylorhq))
+  * [#2161](https://github.com/embroider-build/embroider/pull/2161) Optimize implicit-modules graph ([@ef4](https://github.com/ef4))
+  * [#2629](https://github.com/embroider-build/embroider/pull/2629) Make route-splitter 10-20x faster when you have > 3000 route splits ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2456](https://github.com/embroider-build/embroider/pull/2456) Ember engines compatibility ([@void-mAlex](https://github.com/void-mAlex))
+* `@embroider/shared-internals`
+  * [#2737](https://github.com/embroider-build/embroider/pull/2737) optimize `ownerOfFile` in PackageCache ([@davidtaylorhq](https://github.com/davidtaylorhq))
+* `@embroider/template-tag-codemod`
+  * [#2716](https://github.com/embroider-build/embroider/pull/2716) feat(template-tag-codemod): add a skipIgnoreRev option to merge-history ([@BlueCutOfficial](https://github.com/BlueCutOfficial))
+* `@embroider/vite`
+  * [#2687](https://github.com/embroider-build/embroider/pull/2687) rolldown-vite -> vite8 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2668](https://github.com/embroider-build/embroider/pull/2668) Rolldown + Rollup :: better filtering ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2597](https://github.com/embroider-build/embroider/pull/2597) Pull out and export configTargets plugin ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2552](https://github.com/embroider-build/embroider/pull/2552) Warn if `{{rootURL}}` is present in index.html ([@pichfl](https://github.com/pichfl))
+  * [#2538](https://github.com/embroider-build/embroider/pull/2538) Add support for rolldown-vite ([@mansona](https://github.com/mansona))
+* `@embroider/macros`
+  * [#2662](https://github.com/embroider-build/embroider/pull/2662) `setTesting()` from `@embroider/macros` ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2550](https://github.com/embroider-build/embroider/pull/2550) new Macro: `appEmberSatisfies(range)` ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* `@embroider/addon-dev`
+  * [#2651](https://github.com/embroider-build/embroider/pull/2651) Update addon-dev to support glint 1 and glint 2 and choose between them based on your available dependencies ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* `@embroider/addon-dev`, `@embroider/vite`
+  * [#2650](https://github.com/embroider-build/embroider/pull/2650) Update content-tag to 4.1.0 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* `@embroider/reverse-exports`
+  * [#2614](https://github.com/embroider-build/embroider/pull/2614) Extend node support for reverse-exports package back to Node v12 ([@ef4](https://github.com/ef4))
+* `@embroider/legacy-inspector-support`
+  * [#2522](https://github.com/embroider-build/embroider/pull/2522) Add compat ember-inspector support ([@BlueCutOfficial](https://github.com/BlueCutOfficial))
+
+#### :bug: Bug Fix
+* `@embroider/compat`
+  * [#2742](https://github.com/embroider-build/embroider/pull/2742) fix: handle Embroider macro helpers in template tag codemod ([@olenderhub](https://github.com/olenderhub))
+  * [#2758](https://github.com/embroider-build/embroider/pull/2758) perf: faster path generation, safer tree building ([@runspired](https://github.com/runspired))
+  * [#2757](https://github.com/embroider-build/embroider/pull/2757) perf: fix stack overflow ([@runspired](https://github.com/runspired))
+  * [#2695](https://github.com/embroider-build/embroider/pull/2695) Conditional file writes for Ember modules ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2696](https://github.com/embroider-build/embroider/pull/2696) Fix paths check to use existence rather than value-as-key lookup ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+  * [#2561](https://github.com/embroider-build/embroider/pull/2561) `@embroider/compat`: Remove `ember-source` from dependencies ([@mkszepp](https://github.com/mkszepp))
+  * [#2544](https://github.com/embroider-build/embroider/pull/2544) Chore: Upgrade jsdom ([@nikolasrieble](https://github.com/nikolasrieble))
+  * [#2545](https://github.com/embroider-build/embroider/pull/2545) chore: upgrade @babel/runtime in compat ([@nikolasrieble](https://github.com/nikolasrieble))
+* `@embroider/macros`
+  * [#2787](https://github.com/embroider-build/embroider/pull/2787) macroCondition: support && / || logical expression position ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2772](https://github.com/embroider-build/embroider/pull/2772) Use parseSync in @embroider/macros for Babel 8 compatibility ([@johanrd](https://github.com/johanrd))
+  * [#2688](https://github.com/embroider-build/embroider/pull/2688) Robustify the global macros variable ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2680](https://github.com/embroider-build/embroider/pull/2680) Fix types for setTesting ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2665](https://github.com/embroider-build/embroider/pull/2665) widen the ember-cli-babel dependency range for macros ([@mansona](https://github.com/mansona))
+  * [#2626](https://github.com/embroider-build/embroider/pull/2626) Fix appEmberSatisfies macro ([@ef4](https://github.com/ef4))
+  * [#2599](https://github.com/embroider-build/embroider/pull/2599) Fix runtime implementation of negated macroCondition ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2590](https://github.com/embroider-build/embroider/pull/2590) tolerate negation before macroCondition ([@ef4](https://github.com/ef4))
+  * [#2571](https://github.com/embroider-build/embroider/pull/2571) Drop `node:` prefix on imports in app-ember-satisfies to accomodate node < 16 ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* `@embroider/addon-dev`
+  * [#2777](https://github.com/embroider-build/embroider/pull/2777) `publicAssets` uses `closeBundle` instead of `generateBundle` so it can work with generated assets ([@evoactivity](https://github.com/evoactivity))
+  * [#2619](https://github.com/embroider-build/embroider/pull/2619) Fix rollup incremental plugin ([@bendemboski](https://github.com/bendemboski))
+  * [#2618](https://github.com/embroider-build/embroider/pull/2618) Cleanup for #2616 ([@bendemboski](https://github.com/bendemboski))
+  * [#2616](https://github.com/embroider-build/embroider/pull/2616) Don't let keepAssets plugin corrupt source maps ([@bendemboski](https://github.com/bendemboski))
+* `@embroider/vite`
+  * [#2771](https://github.com/embroider-build/embroider/pull/2771) fix: tolerate ENOTEMPTY on jumpRoot rename race in @embroider/vite resolver ([@hugorodro](https://github.com/hugorodro))
+  * [#2750](https://github.com/embroider-build/embroider/pull/2750) Add license metadata for `@embroider/vite` ([@davidtaylorhq](https://github.com/davidtaylorhq))
+  * [#2745](https://github.com/embroider-build/embroider/pull/2745) Fix `@embroider/virtual` emits under Vite's `experimental.bundleMode` ([@davidtaylorhq](https://github.com/davidtaylorhq))
+  * [#2732](https://github.com/embroider-build/embroider/pull/2732) Fix emitFile warning ([@ef4](https://github.com/ef4))
+  * [#2727](https://github.com/embroider-build/embroider/pull/2727) Update `send` package to fix security vulnerability ([@mkszepp](https://github.com/mkszepp))
+  * [#2686](https://github.com/embroider-build/embroider/pull/2686) Add keywords to package.json for vite ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2667](https://github.com/embroider-build/embroider/pull/2667) Fix the hbs filter ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2664](https://github.com/embroider-build/embroider/pull/2664) Narrow gjsFilter to not include files that happen to have .gjs in their file name ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2622](https://github.com/embroider-build/embroider/pull/2622) Protect against the compat build running multiple times in parallel ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2499](https://github.com/embroider-build/embroider/pull/2499) Use options hook for running compat-prebuild ([@simonihmig](https://github.com/simonihmig))
+  * [#2600](https://github.com/embroider-build/embroider/pull/2600) Use Vite's resolved cacheDir to determine cache location ([@mogstad](https://github.com/mogstad))
+  * [#2601](https://github.com/embroider-build/embroider/pull/2601) Support `content-for` with single quotes as well ([@bertdeblock](https://github.com/bertdeblock))
+  * [#2593](https://github.com/embroider-build/embroider/pull/2593) Fix race between multiple builds creating embroider-vite-jump ([@ef4](https://github.com/ef4))
+  * [#2584](https://github.com/embroider-build/embroider/pull/2584) Conditianlly add entrypoints for the index.html files IFF they exist ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2586](https://github.com/embroider-build/embroider/pull/2586) Fix {{content-for "head"}} being moved to body and add a regression test ([@mansona](https://github.com/mansona))
+  * [#2581](https://github.com/embroider-build/embroider/pull/2581) fix error on windows build with lazy engines or re-written packages ([@void-mAlex](https://github.com/void-mAlex))
+  * [#2580](https://github.com/embroider-build/embroider/pull/2580) allow FORCE_BUILD_TESTS to work in mode=production ([@mansona](https://github.com/mansona))
+  * [#2566](https://github.com/embroider-build/embroider/pull/2566) Fix CI for upstream rolldown and webpack changes ([@ef4](https://github.com/ef4))
+* `@embroider/addon-shim`
+  * [#2761](https://github.com/embroider-build/embroider/pull/2761) perf: dedupe v2 addons by default ([@runspired](https://github.com/runspired))
+  * [#2608](https://github.com/embroider-build/embroider/pull/2608) fix deployment of addon-shim ([@mansona](https://github.com/mansona))
+  * [#2604](https://github.com/embroider-build/embroider/pull/2604) Drop the need for ember-auto-import dependency on app for @embroider/addon-shim ([@mansona](https://github.com/mansona))
+* `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/shared-internals`, `@embroider/template-tag-codemod`, `@embroider/vite`
+  * [#2760](https://github.com/embroider-build/embroider/pull/2760) perf: dont use array spread ([@runspired](https://github.com/runspired))
+* `@embroider/template-tag-codemod`
+  * [#2717](https://github.com/embroider-build/embroider/pull/2717) fix(template-tag-codemod): this becomes controller on component invokation ([@BlueCutOfficial](https://github.com/BlueCutOfficial))
+  * [#2478](https://github.com/embroider-build/embroider/pull/2478) allow merging histories for independent codemod invocations of components routes and tests ([@void-mAlex](https://github.com/void-mAlex))
+* `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/template-tag-codemod`
+  * [#2661](https://github.com/embroider-build/embroider/pull/2661) cleaning up AMD template compiler deprecation ([@ef4](https://github.com/ef4))
+* `@embroider/core`
+  * [#2685](https://github.com/embroider-build/embroider/pull/2685) Fix getAppFiles extensions ([@JezerM](https://github.com/JezerM))
+  * [#2639](https://github.com/embroider-build/embroider/pull/2639) Fix `getAppFiles` filters to prevent app.ts from ending up in compatModules ([@BlueCutOfficial](https://github.com/BlueCutOfficial))
+  * [#2465](https://github.com/embroider-build/embroider/pull/2465) Engine-specific module resolver fixes ([@ef4](https://github.com/ef4))
+* `@embroider/compat`, `@embroider/template-tag-codemod`
+  * [#2656](https://github.com/embroider-build/embroider/pull/2656) Upgrade broccoli to ^4.0.0 and align Node requirements to >= 20.19.* ([@Copilot](https://github.com/apps/copilot-swe-agent))
+* `@embroider/shared-internals`
+  * [#2648](https://github.com/embroider-build/embroider/pull/2648) Fix dependency-aware macros in dummy apps ([@ef4](https://github.com/ef4))
+  * [#2553](https://github.com/embroider-build/embroider/pull/2553) Update pkg-entry-points dependency version ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* `@embroider/router`
+  * [#2624](https://github.com/embroider-build/embroider/pull/2624) Embroider router support for ember source less than 4.12 ([@void-mAlex](https://github.com/void-mAlex))
+  * [#2612](https://github.com/embroider-build/embroider/pull/2612) fix stickly queryParams on lazy routes/engines ([@void-mAlex](https://github.com/void-mAlex))
+  * [#2543](https://github.com/embroider-build/embroider/pull/2543) Protect against early destruction ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* `@embroider/legacy-inspector-support`
+  * [#2574](https://github.com/embroider-build/embroider/pull/2574) fix deploying of types for inspector-support ([@mansona](https://github.com/mansona))
+  * [#2576](https://github.com/embroider-build/embroider/pull/2576) don't break SSR with legacy-inspector-support ([@mansona](https://github.com/mansona))
+  * [#2569](https://github.com/embroider-build/embroider/pull/2569) fix release of legacy-inspector-support ([@mansona](https://github.com/mansona))
+
+#### :memo: Documentation
+* Other
+  * [#2448](https://github.com/embroider-build/embroider/pull/2448) Document adding app reexports to package.json#exports ([@fdeters](https://github.com/fdeters))
+* `@embroider/macros`
+  * [#2606](https://github.com/embroider-build/embroider/pull/2606) Fix typo in README.md regarding macroCondition ([@MelSumner](https://github.com/MelSumner))
+* `@embroider/template-tag-codemod`
+  * [#2588](https://github.com/embroider-build/embroider/pull/2588) Add warning about losing non-template-tag changes in merge-history ([@balinterdi](https://github.com/balinterdi))
+* `@embroider/legacy-inspector-support`
+  * [#2578](https://github.com/embroider-build/embroider/pull/2578) Add installation section to `@embroider/legacy-inspector-support` README.md ([@johanrd](https://github.com/johanrd))
+
+#### :house: Internal
+* Other
+  * [#2785](https://github.com/embroider-build/embroider/pull/2785) Abstract vite dev utility (for qunit) for visiting /tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2765](https://github.com/embroider-build/embroider/pull/2765) Enable declarationMap in our base tsconfig ([@ef4](https://github.com/ef4))
+  * [#2718](https://github.com/embroider-build/embroider/pull/2718) fix(ts-app-template): use scripts for a Vite app ([@BlueCutOfficial](https://github.com/BlueCutOfficial))
+  * [#2679](https://github.com/embroider-build/embroider/pull/2679) Add scenarios for 6.12 + use-ember-modules ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2666](https://github.com/embroider-build/embroider/pull/2666) upgrade release-plan ([@mansona](https://github.com/mansona))
+  * [#2653](https://github.com/embroider-build/embroider/pull/2653) Fix CI - content-tag whitespace ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2605](https://github.com/embroider-build/embroider/pull/2605) Regenerate lockfile ([@ef4](https://github.com/ef4))
+  * [#2585](https://github.com/embroider-build/embroider/pull/2585) Split windows tests ([@mansona](https://github.com/mansona))
+* `@embroider/addon-dev`, `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/vite`
+  * [#2778](https://github.com/embroider-build/embroider/pull/2778) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/vite`
+  * [#2769](https://github.com/embroider-build/embroider/pull/2769) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2746](https://github.com/embroider-build/embroider/pull/2746) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2728](https://github.com/embroider-build/embroider/pull/2728) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2693](https://github.com/embroider-build/embroider/pull/2693) Fix CI: use caret range for rolldown devDependency ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+  * [#2669](https://github.com/embroider-build/embroider/pull/2669) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2641](https://github.com/embroider-build/embroider/pull/2641) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2642](https://github.com/embroider-build/embroider/pull/2642) Use stable vite by default in development ([@ef4](https://github.com/ef4))
+  * [#2640](https://github.com/embroider-build/embroider/pull/2640) Align the rollup versions to latest beta - fixes CI ([@BlueCutOfficial](https://github.com/BlueCutOfficial))
+  * [#2594](https://github.com/embroider-build/embroider/pull/2594) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2592](https://github.com/embroider-build/embroider/pull/2592) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2587](https://github.com/embroider-build/embroider/pull/2587) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2582](https://github.com/embroider-build/embroider/pull/2582) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2575](https://github.com/embroider-build/embroider/pull/2575) simplify gitignore for @embroider/vite ([@mansona](https://github.com/mansona))
+* `@embroider/addon-shim`, `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/shared-internals`, `@embroider/template-tag-codemod`, `@embroider/vite`
+  * [#2751](https://github.com/embroider-build/embroider/pull/2751) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/core`
+  * [#2743](https://github.com/embroider-build/embroider/pull/2743) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2645](https://github.com/embroider-build/embroider/pull/2645) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2632](https://github.com/embroider-build/embroider/pull/2632) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2630](https://github.com/embroider-build/embroider/pull/2630) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2551](https://github.com/embroider-build/embroider/pull/2551) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/shared-internals`, `@embroider/vite`
+  * [#2739](https://github.com/embroider-build/embroider/pull/2739) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2556](https://github.com/embroider-build/embroider/pull/2556) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/macros`
+  * [#2741](https://github.com/embroider-build/embroider/pull/2741) move macros to be a project-based tsconfig ([@mansona](https://github.com/mansona))
+* `@embroider/compat`
+  * [#2740](https://github.com/embroider-build/embroider/pull/2740) Cleanup unused amd support features ([@ef4](https://github.com/ef4))
+  * [#2719](https://github.com/embroider-build/embroider/pull/2719) Fix CI for ember-source 7 ([@mansona](https://github.com/mansona))
+  * [#2546](https://github.com/embroider-build/embroider/pull/2546) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/compat`, `@embroider/template-tag-codemod`
+  * [#2726](https://github.com/embroider-build/embroider/pull/2726) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2725](https://github.com/embroider-build/embroider/pull/2725) Fix release ([@mansona](https://github.com/mansona))
+* `@embroider/compat`, `@embroider/vite`
+  * [#2694](https://github.com/embroider-build/embroider/pull/2694) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/template-tag-codemod`, `@embroider/vite`
+  * [#2689](https://github.com/embroider-build/embroider/pull/2689) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/core`, `@embroider/vite`
+  * [#2684](https://github.com/embroider-build/embroider/pull/2684) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/vite`
+  * [#2681](https://github.com/embroider-build/embroider/pull/2681) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2673](https://github.com/embroider-build/embroider/pull/2673) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2627](https://github.com/embroider-build/embroider/pull/2627) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2591](https://github.com/embroider-build/embroider/pull/2591) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/addon-dev`, `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/template-tag-codemod`, `@embroider/vite`
+  * [#2654](https://github.com/embroider-build/embroider/pull/2654) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/addon-dev`
+  * [#2652](https://github.com/embroider-build/embroider/pull/2652) Switch addon-dev to vitest ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2620](https://github.com/embroider-build/embroider/pull/2620) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2617](https://github.com/embroider-build/embroider/pull/2617) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/addon-dev`, `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/shared-internals`, `@embroider/vite`
+  * [#2649](https://github.com/embroider-build/embroider/pull/2649) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/router`
+  * [#2625](https://github.com/embroider-build/embroider/pull/2625) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2613](https://github.com/embroider-build/embroider/pull/2613) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/core`, `@embroider/reverse-exports`, `@embroider/vite`
+  * [#2615](https://github.com/embroider-build/embroider/pull/2615) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/addon-shim`, `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/vite`
+  * [#2610](https://github.com/embroider-build/embroider/pull/2610) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/addon-shim`, `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/template-tag-codemod`, `@embroider/vite`
+  * [#2598](https://github.com/embroider-build/embroider/pull/2598) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/legacy-inspector-support`, `@embroider/template-tag-codemod`, `@embroider/vite`
+  * [#2579](https://github.com/embroider-build/embroider/pull/2579) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/compat`, `@embroider/core`, `@embroider/legacy-inspector-support`, `@embroider/macros`, `@embroider/vite`
+  * [#2573](https://github.com/embroider-build/embroider/pull/2573) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+  * [#2567](https://github.com/embroider-build/embroider/pull/2567) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/compat`, `@embroider/core`, `@embroider/legacy-inspector-support`, `@embroider/macros`, `@embroider/router`, `@embroider/vite`
+  * [#2564](https://github.com/embroider-build/embroider/pull/2564) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+* `@embroider/compat`, `@embroider/core`, `@embroider/macros`, `@embroider/router`, `@embroider/vite`
+  * [#2562](https://github.com/embroider-build/embroider/pull/2562) Move jest-suites out of scenario tester and make it so we can swap individual packages to vitest ([@mansona](https://github.com/mansona))
+* `@embroider/router`, `@embroider/vite`
+  * [#2536](https://github.com/embroider-build/embroider/pull/2536) Prepare Release ([@github-actions[bot]](https://github.com/apps/github-actions))
+
+#### Committers: 25
+- @NullVoxPopuli's reduced-access machine account for AI usage ([@NullVoxPopuli-ai-agent](https://github.com/NullVoxPopuli-ai-agent))
+- Alex ([@void-mAlex](https://github.com/void-mAlex))
+- Balint Erdi ([@balinterdi](https://github.com/balinterdi))
+- Ben Demboski ([@bendemboski](https://github.com/bendemboski))
+- Bert De Block ([@bertdeblock](https://github.com/bertdeblock))
+- Bjarne Mogstad ([@mogstad](https://github.com/mogstad))
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Chris Thoburn ([@runspired](https://github.com/runspired))
+- Copilot [Bot] ([@copilot-swe-agent](https://github.com/apps/copilot-swe-agent))
+- David Taylor ([@davidtaylorhq](https://github.com/davidtaylorhq))
+- Edward Faulkner ([@ef4](https://github.com/ef4))
+- Florian Pichler ([@pichfl](https://github.com/pichfl))
+- Forrest Deters ([@fdeters](https://github.com/fdeters))
+- GitHub Actions [Bot] ([@github-actions](https://github.com/apps/github-actions))
+- Hubert Olender ([@olenderhub](https://github.com/olenderhub))
+- Hugo Rodriguez ([@hugorodro](https://github.com/hugorodro))
+- Jezer Mejía ([@JezerM](https://github.com/JezerM))
+- Johan Røed ([@johanrd](https://github.com/johanrd))
+- Liam ([@evoactivity](https://github.com/evoactivity))
+- Marine Dunstetter ([@BlueCutOfficial](https://github.com/BlueCutOfficial))
+- Markus Sanin ([@mkszepp](https://github.com/mkszepp))
+- Melanie Sumner ([@MelSumner](https://github.com/MelSumner))
+- Nikolas Rieble ([@nikolasrieble](https://github.com/nikolasrieble))
+- Simon Ihmig ([@simonihmig](https://github.com/simonihmig))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2026-06-24)
 
 * @embroider/addon-dev 8.3.1 (patch)
